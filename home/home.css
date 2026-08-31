@@ -1,0 +1,82 @@
+/* CABEÇALHO */
+
+a {
+    color: var(--branco);
+    text-decoration: none; /*tira o sublinhado */
+}
+
+.cabecalho {
+    background-color: var(--azul-escuro);
+
+    display: flex;
+
+    /*Sentido row*/
+    justify-content: space-between;
+
+    /*Sentido column*/
+    align-items: center;
+    padding: 0px 120px;
+
+    height: 10vh; /* 10% da altura da janela e visualização possivel*/ 
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navegacao a {
+   text-transform: uppercase;
+   font-size: 1em; /* puxa do pai de navegação*/
+   font-weight: 500;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+/* PRIMEIRO BANNER */
+.banner-principal {
+    color: var(--branco);
+    background-image: url(../imgs/banner-principal-home.png);
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* 70% da altura da janela e visualização possivel*/ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 120px;
+}
+
+.texto-banner {
+    height: 100%;
+
+    align-items: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 50px;
+}
+
+.texto-banner p {
+    font-size: 1.5em;
+    width: 50%;
+}
+
+.botao {
+    padding: 20px 50px;
+
+    border-radius: 10px;
+
+    background-color: var(--cor-destaque);
+    color: var(--azul-escuro);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.banner-principal img {
+    align-self: flex-end;
+    width: 35%;
+}
