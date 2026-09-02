@@ -1,82 +1,335 @@
-/* CABEÇALHO */
-
 a {
     color: var(--branco);
-    text-decoration: none; /*tira o sublinhado */
+    text-decoration: none;
 }
-
 .cabecalho {
     background-color: var(--azul-escuro);
-
     display: flex;
-
-    /*Sentido row*/
     justify-content: space-between;
-
-    /*Sentido column*/
     align-items: center;
-    padding: 0px 120px;
-
-    height: 10vh; /* 10% da altura da janela e visualização possivel*/ 
+    padding: 0 120px;
+    height: 10vh;
 }
-
 .navegacao {
     display: flex;
     align-items: center;
     gap: 50px;
 }
-
 .navegacao a {
-   text-transform: uppercase;
-   font-size: 1em; /* puxa do pai de navegação*/
-   font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1em; 
+    font-weight: 500;
 }
-
-/* CONTEÚDO PRINCIPAL */
-
-/* PRIMEIRO BANNER */
 .banner-principal {
     color: var(--branco);
+    height: 70vh;
     background-image: url(../imgs/banner-principal-home.png);
     background-size: cover;
-    background-position: center;
-    height: 70vh; /* 70% da altura da janela e visualização possivel*/ 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    padding: 0px 120px;
+    justify-content: space-between;
+    padding: 0 120px;
 }
-
 .texto-banner {
     height: 100%;
-
-    align-items: flex-start;
-
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-
     gap: 50px;
 }
-
 .texto-banner p {
     font-size: 1.5em;
-    width: 50%;
+    width: 60%;
 }
-
 .botao {
     padding: 20px 50px;
-
     border-radius: 10px;
-
     background-color: var(--cor-destaque);
     color: var(--azul-escuro);
     font-size: 1.2em;
     font-weight: 700;
+    text-transform: uppercase;
 }
-
+.botao:hover{
+    background-color: #2ab;
+    color: var(--branco);
+    cursor: pointer;
+}
 .banner-principal img {
     align-self: flex-end;
     width: 35%;
+}
+.titulo-secao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo-secao h2{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.titulo-secao span{
+    display: flex;
+    width: 250px;
+    background-color: var(--cor-destaque);
+    height: 3px;
+}
+.beneficios{
+    padding: 50px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+.beneficios-lista{
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    gap: 10%;
+    justify-content: center;
+}
+.beneficio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 50px;
+    border-radius: 30px;
+    border: 1px solid var(--azul-escuro);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    position: relative;
+}
+.beneficio-icone img{
+    width: 50%;
+}
+.beneficio-icone{
+    border: 4px solid var(--cor-destaque);
+    background-color: var(--branco);
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-items: center;
+}
+.beneficio h3{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    width: 90%;
+}
+.beneficio p{
+    font-size: 1em;
+    width: 80%;
+}
+.banner-meio{
+    height: 60vh;
+    background-image: url(../imgs/Banner\ centro.svg);
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 120px;
+    color: var(--branco);
+}
+
+/* BANNER-FIM */
+
+.banner-fim {
+    padding: 50px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.texto-acervo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-acervo h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.texto-acervo span {
+    display: flex;
+    width: 250px;
+    background-color: var(--cor-destaque);
+    height: 3px;
+}
+
+.acervos {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    gap: 5%;
+    justify-content: center;
+}
+
+.livro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.livro img {
+    width: 100%;
+}
+
+.titulo-livro {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.titulo-livro h3 {
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--texto);
+}
+
+.autor-livro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.autor-livro h4 {
+    font-size: 0.85em;
+    font-weight: 400;
+    color: var(--texto);
+    margin-bottom: 3px;
+}
+
+.autor-livro h5 {
+    font-size: 0.85em;
+    font-weight: 400;
+    color: var(--texto);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--azul-escuro);
+    padding: 60px 120px 30px;
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-coluna-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+}
+
+.logo-principal {
+    width: 180px;
+}
+
+.logo-senai {
+    width: 140px;
+}
+
+.footer-coluna-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 420px;
+}
+
+.footer-links-superiores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-footer p,
+.redes-sociais p {
+    color: var(--cor-destaque);
+    font-weight: 700;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.nav-footer a {
+    color: var(--branco);
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icones-redes {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icones-redes img {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.2s ease;
+}
+
+.icones-redes img:hover {
+    transform: scale(1.2);
+}
+
+footer span {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+}
+
+.ultimo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ultimo p {
+    font-size: 0.8em;
+    color: var(--branco);
+    opacity: 0.8;
+}
+
+.ultimos {
+    display: flex;
+    gap: 40px;
+}
+
+.ultimos a {
+    font-size: 0.8em;
+    color: var(--branco);
+    font-weight: 400;
+    opacity: 0.8;
 }
