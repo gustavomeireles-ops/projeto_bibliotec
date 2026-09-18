@@ -1,0 +1,29 @@
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const statusRetirada = document.querySelectorAll(".status");
+
+checkboxes.forEach((caixinha, indice, lista) => {
+
+    // corpo da função
+    // console.log("caixinha: ", caixinha);
+    // console.log("indice: ", indice);
+    // console.log("lista: ", lista); 
+
+    caixinha.addEventListener("change", () => {
+        if (caixinha.checked) {
+            statusRetirada[indice].classList.replace("aguardando", "retirado")
+            // igual o replace:
+            // statusRetirada[indice].classList.remove("aguardando");
+            // statusRetirada[indice].classList.add("retirado");
+            statusRetirada[indice].textContent = "Retirado";
+        }
+
+        else {
+            statusRetirada[indice].classList.replace("retirado", "aguardando")
+            // igual o replace:
+            // statusRetirada[indice].classList.remove("retirado");
+            // statusRetirada[indice].classList.add("aguardando");
+            statusRetirada[indice].textContent = "Aguardando retirada";
+        }
+    })
+});
